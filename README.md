@@ -16,8 +16,9 @@ A test suite for figuring out how to log (not capture in devtools) async stack t
  
 		npm start
 		
- 4. Notice you can see the full async stack trace including clickable links to
-     each source file of functions in the trace (In the red text created by DevTools), and nothing but the last synchronous stack frame in the grey text.
+ 4. Notice:
+     - The red text created by DevTools, has full async call stack information including clickable links to the source of each function 
+     - The grey text created by `console.log(error.stack)` has nothing but the last synchronous stack frame
      
      <img src="stack-trace.png"/>
 
