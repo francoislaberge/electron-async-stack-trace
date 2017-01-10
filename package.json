@@ -1,0 +1,27 @@
+{
+  "name": "electron-async-stack-trace",
+  "version": "1.0.0",
+  "description": "A test suite for figuring out how to log (not capture in devtools) async stack traces",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francoislaberge/electron-async-stack-trace.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/francoislaberge/electron-async-stack-trace/issues"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}
