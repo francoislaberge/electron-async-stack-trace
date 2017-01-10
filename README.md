@@ -21,3 +21,7 @@ Demonstration of the lack of ability to get the string (for logging purposes) of
      - The grey text created by `console.log(error.stack)` has nothing but the last synchronous stack frame
      
      <img src="stack-trace.png"/>
+     
+ 5. [See the `renderer.js` source to understand how this test was generated](https://github.com/francoislaberge/electron-async-stack-trace/blob/master/renderer.js#L3-L23)
+ 
+
