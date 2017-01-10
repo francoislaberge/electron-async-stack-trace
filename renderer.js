@@ -1,7 +1,5 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
 
+// Series of nested async functions
 function async1(){
     setTimeout( async2, 10 );
 }
@@ -11,37 +9,15 @@ function async2(){
 function async3(){
     throw new Error('Whoops!');
 }
+
+// Start the async chain that generates an error
 setTimeout( async1, 100 );
 
 
+// Use onerror to capture unhandled exceptions.
+// NOTE: We used window.onerror because it unlike 'uncaughtException' event handlers
+// doesn't interfere with the default behavior DevTools behavior of logging a rich
+// async call stack to the console.
 window.onerror = function(messageOrEvent, source, lineno, colno, error){
-    //debugger;
-    console.error(error);
+    console.log(error.stack);
 }
-
-
-function causeErrors(level){
-    if(level===0){
-        throw new Error('Recursssiioon');
-    }
-    causeErrors(level-1);
-}
-
-window.causeErrors = causeErrors;
-window.currentWindow = require('electron').remote.getCurrentWindow();
-
-
-//console.log(window.currentWindow);
-
-//causeErrors(10);
-
-
-
-window.run = function(script){
-    currentWindow.webContents.devToolsWebContents.executeJavaScript(script, (result) => {
-        // Load the page for real
-        console.log( result );
-    });
-}
-
-//run('WebInspector');
