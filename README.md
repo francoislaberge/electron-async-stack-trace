@@ -3,23 +3,22 @@ A test suite for figuring out how to log (not capture in devtools) async stack t
 
 ## Usage
 
- 1. Clone / Install Dependencies
-
-        git clone git@github.com:francoislaberge/electron-async-stack-trace.git
-        cd electron-async-stack-trace
-        npm install
-
+  1. Clone / Install Dependencies
+```
+git clone git@github.com:francoislaberge/electron-async-stack-trace.git
+cd electron-async-stack-trace
+npm install
+```	    
   2. Make sure the Async Flag is checked
-
+  
      <img src="async-flag.png"/>
-
-  2. Running the application
-
-        npm start
-
-  3. Notice you can see the full async stack trace including clickable links to
+  3. Running the application
+```  
+npm start
+```
+  4. Notice you can see the full async stack trace including clickable links to
      each source file of functions in the trace
-
+     
      <img src="stack-trace.png"/>
 
 
