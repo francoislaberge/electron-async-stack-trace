@@ -1,5 +1,5 @@
 # Electron Async Stack Trace
-A test suite for figuring out how to log (not capture in devtools) async stack traces
+Demonstration of the lack of ability to get the string (for logging purposes) of the async call stack that Chrome's DevTools has access to.
 
 ## Usage
 
